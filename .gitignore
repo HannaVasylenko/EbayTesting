@@ -1,0 +1,17 @@
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+# Project config and sensitive data
+package-lock.json
+package.json
+playwright.config.js
+
+# Test data and fixtures
+tests/testDataCredentials/
+fixtures/
