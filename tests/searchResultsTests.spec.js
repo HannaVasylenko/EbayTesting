@@ -4,7 +4,7 @@ import { test, expect } from './fixtures/appFixtures.js';
 import testData from '../tests/testDataCredentials/testData.json' assert { type: 'json' };
 
 test.describe('Search Result Page', () => {
-  test('should open and verify Deals title', async ({ searchResultPage }) => {
+  test('verify Deals title on the page', async ({ searchResultPage }) => {
     await searchResultPage.navigate();
     await searchResultPage.fillValueIntoSearchField(testData.searchTitle);
     await searchResultPage.verifySearchTitle(testData.searchTitle);

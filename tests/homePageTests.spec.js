@@ -9,12 +9,16 @@ test.describe.serial('Home Page Tests', () => {
     const context = await browser.newContext();
     const page = await context.newPage();
     homePage = new HomePage(page);
-
     await homePage.navigate();
   });
 
-  test('Verify home page URL', async () => {
+  test('Verify Home page URL', async () => {
     await homePage.verifyUrl();
+  });
+
+  test('Verify select shipping location', async () => {
+    await homePage.selectShippingLocation(testData.country);
+    await homePage.verifySelectedShippingLocation(testData.country);
   });
 
   test('Verify category window opens', async () => {
